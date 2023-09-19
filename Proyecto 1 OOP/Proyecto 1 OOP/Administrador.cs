@@ -18,7 +18,7 @@ namespace Proyecto_1_OOP
             int groupNumber = int.Parse(ReadLine());
             for (int i = 0; i < groupNumber; i++)
             {
-                WriteLine("Ingrese el nombre del grupo");
+                WriteLine("Ingrese el nombre del grupo: " + (i + 1));
                 grupos.Add(new Grupo(ReadLine()));
             }
         }
@@ -35,8 +35,21 @@ namespace Proyecto_1_OOP
                 int opcion = int.Parse(ReadLine());
                 if(opcion > 0 && opcion <= grupos.Count)
                 {
-                    
+                    WriteLine("Escriba el nombre del cliente ");
+                    string nombre = ReadLine();
+                    WriteLine("\nEscriba la edad del cliente");
+                    int edad = int.Parse(ReadLine());
+                    WriteLine("\nEscriba la direccion del cliente");
+                    string direccion = ReadLine();
+                    WriteLine("\nEscriba el numero de cuenta del cliente");
+                    string cuenta = ReadLine();
+                    WriteLine("\nEscriba la cantidad de dinero del cliente");
+                    double fondos = double.Parse(ReadLine());
+                    grupos[0].Add(nombre, edad, direccion, cuenta, fondos);
+                    Console.WriteLine("Producto agregado");
+                    return;
                 }
+                WriteLine("Número de grupo erróneo");
             }
             
         }

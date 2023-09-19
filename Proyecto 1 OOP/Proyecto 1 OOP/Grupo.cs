@@ -30,9 +30,9 @@ namespace Proyecto_1_OOP
             Name = name;
         }
 
-        public void Add()
+        public void Add(string nombre, int edad, string direccion, string numeroDeCuenta, double fondos)
         {
-
+            integrantes.Add(new Persona(integrantes.Count + 1,nombre, edad, direccion, numeroDeCuenta, fondos));
         }
 
     }
