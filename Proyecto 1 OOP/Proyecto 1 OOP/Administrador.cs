@@ -9,6 +9,7 @@ namespace Proyecto_1_OOP
 {
     internal class Administrador
     {
+        //saxofon
         private List<Grupo> grupos = new List<Grupo>();
 
         public void CrearGrupos()
@@ -30,6 +31,11 @@ namespace Proyecto_1_OOP
                 for(int i = 0; i < grupos.Count; i++)
                 {
                     WriteLine($"   {i+1}. {grupos[i].Name}");
+                }
+                int opcion = int.Parse(ReadLine());
+                if(opcion > 0 && opcion <= grupos.Count)
+                {
+                    
                 }
             }
             

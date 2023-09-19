@@ -24,10 +24,15 @@ namespace Proyecto_1_OOP
             }
         }
         
-
+        
         public Grupo(string name)
         {
             Name = name;
+        }
+
+        public void Add()
+        {
+
         }
 
     }
