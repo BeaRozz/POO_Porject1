@@ -27,7 +27,7 @@ namespace Proyecto_1_OOP
             if(grupos.Count != 0)
             {
                 WriteLine("¿A que grupo desea agregar elementos?");
-                for (int i = 0; i < grupos.Count; i++)
+                for(int i = 0; i < grupos.Count; i++)
                 {
                     WriteLine($"   {i+1}. {grupos[i].Name}");
                 }
