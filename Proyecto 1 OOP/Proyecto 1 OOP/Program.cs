@@ -13,7 +13,9 @@ internal class Program
             opcion = int.Parse(ReadLine());
             switch (opcion)
             {
-                
+                case 1:
+                    administrador.Agregar();
+                    break;  
 
                 default:
                     break;

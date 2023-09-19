@@ -22,9 +22,17 @@ namespace Proyecto_1_OOP
             }
         }
 
-        public void Agregar(string tipo)
+        public void Agregar()
         {
-
+            if(grupos.Count != 0)
+            {
+                WriteLine("¿A que grupo desea agregar elementos?");
+                for (int i = 0; i < grupos.Count; i++)
+                {
+                    WriteLine($"   {i+1}. {grupos[i].Name}");
+                }
+            }
+            
         }
     }
 }
