@@ -12,6 +12,8 @@ namespace Proyecto_1_OOP
         //saxofon
         private List<Grupo> grupos = new List<Grupo>();
 
+
+
         public void CrearGrupos()
         {
             WriteLine("¿Cuántos grupos necesita?");
@@ -22,16 +24,22 @@ namespace Proyecto_1_OOP
                 grupos.Add(new Grupo(ReadLine()));
             }
         }
+        public void GetGroups()
+        {
+            for (int i = 0; i < grupos.Count; i++)
+            {
+                WriteLine($"   {i + 1}. {grupos[i].Name}");
+            }
+        }
 
         public void Agregar()
         {
             if(grupos.Count != 0)
             {
                 WriteLine("¿A que grupo desea agregar elementos?");
-                for(int i = 0; i < grupos.Count; i++)
-                {
-                    WriteLine($"   {i+1}. {grupos[i].Name}");
-                }
+
+                GetGroups();
+
                 int opcion = int.Parse(ReadLine());
                 if(opcion > 0 && opcion <= grupos.Count)
                 {
@@ -46,12 +54,21 @@ namespace Proyecto_1_OOP
                     WriteLine("\nEscriba la cantidad de dinero del cliente");
                     double fondos = double.Parse(ReadLine());
                     grupos[0].Add(nombre, edad, direccion, cuenta, fondos);
-                    Console.WriteLine("Producto agregado");
+                    WriteLine("Producto agregado");
                     return;
                 }
                 WriteLine("Número de grupo erróneo");
             }
             
+        }
+
+        public void Imprimir()
+        {
+
+        }
+        public void Imprimir(int i)
+        {
+
         }
     }
 }
