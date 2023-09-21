@@ -23,6 +23,8 @@ namespace Proyecto_1_OOP
                 }
             }
         }
+
+        public int Size => integrantes.Count;
         
         
         public Grupo(string name)
@@ -34,6 +36,7 @@ namespace Proyecto_1_OOP
         {
             integrantes.Add(new Persona(integrantes.Count + 1,nombre, edad, direccion, numeroDeCuenta, fondos));
         }
+
 
     }
 }

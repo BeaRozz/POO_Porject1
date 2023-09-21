@@ -50,7 +50,10 @@ namespace Proyecto_1_OOP
             Fondos = fondos;
         }
 
-
+        public string GetInfo()
+        {
+            return $"Nombre: {Nombre}, Edad: {Edad}, Dirección {Direccion}, Numero de cuenta: {numeroCuenta}, Fondos: {Fondos}";
+        }
         
     }
 }

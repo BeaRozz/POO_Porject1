@@ -49,6 +49,7 @@ namespace Proyecto_1_OOP
                     int edad = int.Parse(ReadLine());
                     WriteLine("\nEscriba la direccion del cliente");
                     string direccion = ReadLine();
+                    // Curp, cvv, fecha de vencimiento, 
                     WriteLine("\nEscriba el numero de cuenta del cliente");
                     string cuenta = ReadLine();
                     WriteLine("\nEscriba la cantidad de dinero del cliente");
@@ -64,7 +65,14 @@ namespace Proyecto_1_OOP
 
         public void Imprimir()
         {
+            for (int i = 0; i < grupos.Count; i++)
+            {
+                WriteLine(grupos[i].Name);
+                foreach (var item in grupos[i])
+                {
 
+                }
+            }
         }
         public void Imprimir(int i)
         {
