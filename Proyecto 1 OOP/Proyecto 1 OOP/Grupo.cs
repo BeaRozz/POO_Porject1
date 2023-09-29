@@ -36,7 +36,15 @@ namespace Proyecto_1_OOP
         {
             integrantes.Add(new Persona(integrantes.Count + 1,nombre, edad, direccion, numeroDeCuenta, fondos));
         }
-
+        public string Imprimir()
+        {
+            string cadena = "";
+            foreach(Persona persona in integrantes)
+            {
+                cadena += $"{persona.GetInfo()}\n";
+            }
+            return cadena;
+        }
 
     }
 }

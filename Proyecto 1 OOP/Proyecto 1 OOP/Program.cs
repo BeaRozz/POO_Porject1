@@ -19,6 +19,7 @@ internal class Program
                     break;
 
                 case 5:
+                 
                     WriteLine("¿Desea imprimir un grupo en específico o todos los grupos? \n    1. Todos los grupos \n    2. Un grupo");
                     int opcionGr = int.Parse(ReadLine());
                     if (opcionGr == 1)
@@ -30,7 +31,7 @@ internal class Program
                         WriteLine("¿Qué grupo desea imprimir?");
                         GetGroups();
                         int grupo = int.Parse(ReadLine());
-                        Imprimir(grupo);
+                        Imprimir(grupo-1);
                     }
                     break;
 
@@ -41,44 +42,6 @@ internal class Program
         } while (opcion != 6);
 
     }
-
-    /*
-    int opcion;
-    Administrador administrador = new Administrador();
-    administrador.CrearGrupos();
-    do
-    {
-        WriteLine("Elija una opción \n 1. Agregar \n 2. Eliminar \n 3. Buscar \n 4. Editar \n 5. Imprimir \n 6. Salir");
-        opcion = int.Parse(ReadLine());
-        switch (opcion)
-        {
-            case 1:
-                administrador.Agregar();
-                break;
-
-            case 5:
-                WriteLine("¿Desea imprimir un grupo en específico o todos los grupos? \n    1. Todos los grupos \n    2. Un grupo");
-                int opcionGr = int.Parse(ReadLine());
-                if(opcionGr == 1)
-                {
-                    administrador.Imprimir();
-                }
-                else if(opcionGr == 2)
-                {
-                    WriteLine("¿Qué grupo desea imprimir?");
-                    administrador.GetGroups();
-                    int grupo = int.Parse(ReadLine());
-                    administrador.Imprimir(grupo);
-                }
-                break;
-
-            default:
-                break;
-        }
-
-    } while (opcion != 6);
-    */
-
 
      static void CrearGrupos()
      {
@@ -121,8 +84,8 @@ internal class Program
                 string cuenta = ReadLine();
                 WriteLine("\nEscriba la cantidad de dinero del cliente");
                 double fondos = double.Parse(ReadLine());
-                grupos[0].Add(nombre, edad, direccion, cuenta, fondos);
-                WriteLine("Producto agregado");
+                grupos[opcion-1].Add(nombre, edad, direccion, cuenta, fondos);
+                WriteLine("Persona agregada");
                 return;
             }
             WriteLine("Número de grupo erróneo");
@@ -134,11 +97,28 @@ internal class Program
     {
         for (int i = 0; i < grupos.Count; i++)
         {
-            
+            WriteLine($"{grupos[i].Name}------------------------------------------");
+            if (grupos[i].Size >0)
+            {
+                WriteLine(grupos[i].Imprimir());
+                WriteLine();
+                continue;
+            }
+            WriteLine("Grupo vacío");
+            WriteLine();
+
         }
     }
     static void Imprimir(int i)
     {
-
+        WriteLine($"{grupos[i].Name}------------------------------------------");
+        if (grupos[i].Size > 0)
+        {
+            WriteLine(grupos[i].Imprimir());
+            WriteLine();
+            return;
+        }
+        WriteLine("Grupo vacío");
+        WriteLine();
     }
 }
