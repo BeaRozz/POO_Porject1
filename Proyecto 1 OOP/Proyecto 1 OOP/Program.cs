@@ -36,6 +36,7 @@ internal class Program
                     break;
 
                 default:
+                    WriteLine("Opción inválida");
                     break;
             }
 

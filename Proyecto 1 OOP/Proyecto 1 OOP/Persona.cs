@@ -8,14 +8,14 @@ namespace Proyecto_1_OOP
 {
     internal class Persona
     {
-        private int id; 
+     
         private string nombre;
         private int edad;
         private string direccion;
         private string numeroCuenta;
         private double fondos;
 
-        public int Id { get => id;}
+        public int Id { get; private set; }
         public string Nombre { get => nombre; set => nombre = value; }
         public int Edad { get => edad; 
             set {
@@ -43,6 +43,7 @@ namespace Proyecto_1_OOP
 
         public Persona(int id, string nombre, int edad, string direccion, string numeroDeCuenta, double fondos)
         {
+            Id = id;
             Nombre = nombre;
             Edad = edad;
             Direccion = direccion;
@@ -52,7 +53,7 @@ namespace Proyecto_1_OOP
 
         public string GetInfo()
         {
-            return $"Nombre: {Nombre}, Edad: {Edad}, Dirección {Direccion}, Numero de cuenta: {numeroCuenta}, Fondos: {Fondos}";
+            return $"Id: {Id}, Nombre: {Nombre}, Edad: {Edad}, Dirección: {Direccion}, Numero de cuenta: {numeroCuenta}, Fondos: {Fondos}";
         }
         
     }

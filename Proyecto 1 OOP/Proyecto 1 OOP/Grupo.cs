@@ -10,6 +10,7 @@ namespace Proyecto_1_OOP
     {
         private string name;
         private List<Persona> integrantes = new List<Persona>();
+        private int contador;
 
         public string Name
         {
@@ -17,9 +18,13 @@ namespace Proyecto_1_OOP
 
             set
             {
-                if(name != " ")
+                if(name != "")
                 {
                     name = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Nombre invalido para un grupo");
                 }
             }
         }
