@@ -55,6 +55,8 @@ namespace Proyecto_1_OOP
         {
             return $"Id: {Id}, Nombre: {Nombre}, Edad: {Edad}, Dirección: {Direccion}, Numero de cuenta: {numeroCuenta}, Fondos: {Fondos}";
         }
+
+        
         
     }
 }
