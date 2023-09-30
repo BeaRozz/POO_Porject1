@@ -50,6 +50,7 @@ namespace Proyecto_1_OOP
             return cadena;
         }
 
+        //Find regresa personas, para luego poder interactuar con ellas y modificarlas
         public (bool, Persona) Find(int index)
         {
             int n = integrantes.Count;

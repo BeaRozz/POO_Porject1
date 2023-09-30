@@ -18,6 +18,11 @@ internal class Program
                     Agregar();
                     break;
 
+                case 3:
+                    WriteLine("Desea buscar por: \n    1.nombre\n    2.ID");
+                    int opcionSrch = int.Parse(ReadLine());
+                    
+                        break;
                 case 5:
                  
                     WriteLine("¿Desea imprimir un grupo en específico o todos los grupos? \n    1. Todos los grupos \n    2. Un grupo");
